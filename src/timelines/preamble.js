@@ -1,17 +1,10 @@
-import experimentStart from '../trials/experimentStart'
-import startCode from '../trials/startCode'
-import userId from '../trials/userId'
-import holdUpMarker from '../trials/holdUpMarker'
-import { AT_HOME, IS_ELECTRON } from '../config/main'
+import experimentStart from "../trials/experimentStart";
+import fixation from "../trials/fixation";
 
-console.log('at_home', AT_HOME)
-console.log('env at home', process.env.REACT_APP_AT_HOME)
 const preamble = {
-  type: 'html_keyboard_response',
-  stimulus: '',
-  timeline: (AT_HOME || !IS_ELECTRON) ?
-    [experimentStart(), userId()] :
-    [experimentStart(), userId(), holdUpMarker(), startCode()]
-}
+  type: "html_keyboard_response",
+  stimulus: "",
+  timeline: [experimentStart(), fixation(10000)]
+};
 
-export default preamble
+export default preamble;
