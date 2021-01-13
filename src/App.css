@@ -37,12 +37,49 @@ p, li {
   margin-bottom: -5%;
 }
 
-#fixation-dot {
+.outerbox {
+  width: 100vw;
+  height: 100vw;
   background-color: black;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
 }
+
+.fixation-plus {
+  background-color:white;
+  width: 2vw;
+  height: 2vw;
+  border-radius:50%;
+  position:absolute;
+  top:49vw;
+  left:49vw;
+}
+
+.left {
+  background-color:white;
+  width: 25vw;
+  height: 25vw;
+  position:absolute;
+  top: 38.5vw;
+  left: 10vw;
+}
+
+.right-top {
+  background-color:white;
+  width: 25vw;
+  height: 25vw;
+  position:absolute;
+  top: 10vw;
+  right: 10vw;
+}
+
+.right-bot {
+  background-color:white;
+  width: 25vw;
+  height: 25vw;
+  position:absolute;
+  top: 65vw;
+  right: 10vw;
+}
+
 
 .jspsych-btn {
   padding: 0.5rem 1rem;
