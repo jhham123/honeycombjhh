@@ -41,8 +41,9 @@ function createWindow() {
   if (process.env.ELECTRON_START_URL) {
     // in dev mode, disable web security to allow local file loading
     mainWindow = new BrowserWindow({
-      width: 1500,
-      height: 900,
+      // width: 1500,
+      // height: 900,
+      fullscreen: true,
       icon: "./favicon.ico",
       webPreferences: {
         nodeIntegration: true,

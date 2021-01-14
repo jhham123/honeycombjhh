@@ -5,7 +5,14 @@ p, li {
   text-align: center;
 }
 
-.photodiode-box {
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* .photodiode-box {
   position: fixed;
   bottom: 3px;
   right: 3px;
@@ -14,33 +21,49 @@ p, li {
   margin: auto;
   height: 50px;
   width: 50px;
-}
+} */
 
-.photodiode-spot {
+/* .photodiode-spot {
   width: 50px;
   height: 50px;
   background-color: black;
   border-radius: 50%;
   position: absolute;
-}
+} */
 
-.main-prompt, .beads_container {
+/* .main-prompt, .beads_container {
   height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center !important;
-}
+} */
 
-.main-prompt {
+/* .main-prompt {
   margin-top: -10%;
   margin-bottom: -5%;
-}
+} */
 
-.outerbox {
+/* .outerbox {
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   background-color: black;
+} */
+
+/*
+grid-column-start: 2;
+  grid-column-end: five;
+  grid-row-start: row1-start;
+  grid-row-end: 3;
+  justify-self: center;
+*/
+
+.grid_container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 11vw 26vw 26vw 26vw 11vw;
+  grid-template-rows: 11vh 26vh 26vh 26vh 11vh;
+
 }
 
 .fixation-plus {
@@ -48,36 +71,63 @@ p, li {
   width: 2vw;
   height: 2vw;
   border-radius:50%;
-  position:absolute;
-  top:49vw;
-  left:49vw;
+
+  justify-self: center;
+  align-self: center;
+
+  grid-column-start: 3;
+  grid-column-end: 3;
+
+  grid-row-start: 3;
+  grid-row-end: 3;
 }
 
 .left {
   background-color:white;
-  width: 25vw;
-  height: 25vw;
-  position:absolute;
-  top: 38.5vw;
-  left: 10vw;
+  width: 18vw;
+  height: 18vw;
+
+  justify-self: center;
+  align-self: center;
+
+  grid-column-start: 2;
+  grid-column-end: 2;
+
+  grid-row-start: 3;
+  grid-row-end: 3;
+
 }
 
 .right-top {
   background-color:white;
-  width: 25vw;
-  height: 25vw;
-  position:absolute;
-  top: 10vw;
-  right: 10vw;
+  width: 18vw;
+  height: 18vw;
+
+  justify-self: center;
+  align-self: center;
+
+  grid-column-start: 4;
+  grid-column-end: 4;
+
+  grid-row-start: 2;
+  grid-row-end: 2;
+
 }
 
 .right-bot {
   background-color:white;
-  width: 25vw;
-  height: 25vw;
-  position:absolute;
-  top: 65vw;
-  right: 10vw;
+  width: 18vw;
+  height: 18vw;
+
+  justify-self: center;
+  align-self: center;
+
+  grid-column-start: 4;
+  grid-column-end: 4;
+
+  grid-row-start: 4;
+  grid-row-end: 4;
+
 }
 
 

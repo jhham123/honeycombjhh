@@ -1,5 +1,4 @@
 import {lang} from "../config/main";
-import {photodiodeGhostBox} from "../lib/markup/photodiode";
 import {baseStimulus} from "../lib/markup/stimuli";
 
 const experimentEnd = duration => {

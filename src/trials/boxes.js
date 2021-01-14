@@ -10,7 +10,7 @@ const boxes = type => {
     rightTop = true;
     rightBot = true;
     duration = 3000;
-  } else if (type === "gamble_gamble") {
+  } else if (type === "gamble_gambles") {
     left = false;
     rightTop = true;
     rightBot = true;
@@ -28,14 +28,13 @@ const boxes = type => {
   }
 
   let boxesHTML = numberBoxes(left, rightTop, rightBot);
-  console.log(boxesHTML);
 
   return {
     type: "html_keyboard_response",
     choices: ["f", "j"],
     stimulus: boxesHTML,
     response_ends_trial: false,
-    trial_duration: duration,
+    trial_duration: duration
     // on_finish: (data) => data.code = code
   };
 };
