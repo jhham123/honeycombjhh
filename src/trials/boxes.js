@@ -15,10 +15,15 @@ const boxes = type => {
     rightTop = true;
     rightBot = true;
     duration = 6000;
-  } else if (type === "gamble_outcome") {
+  } else if (type === "gamble_outcome_win") {
     left = false;
     rightTop = true;
     rightBot = false;
+    duration = 1000;
+  } else if (type === "gamble_outcome_lose") {
+    left = false;
+    rightTop = false;
+    rightBot = true;
     duration = 1000;
   }
 
@@ -30,7 +35,8 @@ const boxes = type => {
     choices: ["f", "j"],
     stimulus: boxesHTML,
     response_ends_trial: false,
-    trial_duration: duration
+    trial_duration: duration,
+    // on_finish: (data) => data.code = code
   };
 };
 
