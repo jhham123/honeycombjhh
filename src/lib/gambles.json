@@ -1,6 +1,14 @@
-{
+[
+  {
     "certain_outcome": "0.2",
     "potential_win": "0.5",
     "potential_loss": "0.1",
     "outcome": "win"
-}
+  },
+  {
+    "certain_outcome": "0.3",
+    "potential_win": "0.6",
+    "potential_loss": "0.2",
+    "outcome": "lose"
+  }
+]
