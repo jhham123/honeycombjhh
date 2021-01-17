@@ -1,12 +1,12 @@
 import fixation from "../trials/fixation";
 import boxes from "../trials/boxes";
-import read_gambles from "../lib/read_gambles";
+import readGambles from "../lib/readGambles";
 import {jitter} from "../lib/utils";
 
-// let gambles = read_gambles();
+// let gambles = readGambles();
 // console.log(gambles);
 
-const gamble_block = gamble => {
+const gambleBlock = gamble => {
   let result =
     gamble.outcome === "win"
       ? boxes("gamble_outcome_win", gamble)
@@ -23,4 +23,4 @@ const gamble_block = gamble => {
   };
 };
 
-export default gamble_block;
+export default gambleBlock;

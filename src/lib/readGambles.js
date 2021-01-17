@@ -1,8 +1,8 @@
 "use strict";
-const read_gambles = () => {
+const readGambles = () => {
   // certain outcome, potential win, potential loss, outcome
   let gamble = require("./gambles.json");
   return gamble;
 };
 
-export default read_gambles;
+export default readGambles;

@@ -1,7 +1,7 @@
 import {jsPsych} from "jspsych-react";
 // "jspsych/plugins/jspsych-image-keyboard-response.js"
 
-const large_white_text = (string, duration) => {
+const largeWhiteText = (string, duration) => {
   if (duration === null) {
     return {
       type: "html_keyboard_response",
@@ -20,4 +20,4 @@ const large_white_text = (string, duration) => {
 
 };
 
-export default large_white_text;
+export default largeWhiteText;
