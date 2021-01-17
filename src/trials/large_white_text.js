@@ -1,0 +1,23 @@
+import {jsPsych} from "jspsych-react";
+// "jspsych/plugins/jspsych-image-keyboard-response.js"
+
+const large_white_text = (string, duration) => {
+  if (duration === null) {
+    return {
+      type: "html_keyboard_response",
+      choices: jsPsych.NO_KEYS,
+      stimulus: `<div class="large-white-text">${string}</div>`,
+      response_ends_trial: false,
+    }
+  }
+  return {
+    type: "html_keyboard_response",
+    choices: jsPsych.NO_KEYS,
+    stimulus: `<div class="large-white-text">${string}</div>`,
+    response_ends_trial: false,
+    trial_duration: duration
+  }
+
+};
+
+export default large_white_text;
