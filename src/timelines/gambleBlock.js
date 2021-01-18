@@ -3,9 +3,6 @@ import boxes from "../trials/boxes";
 import readGambles from "../lib/readGambles";
 import {jitter} from "../lib/utils";
 
-// let gambles = readGambles();
-// console.log(gambles);
-
 const gambleBlock = gamble => {
   let result =
     gamble.outcome === "win"
