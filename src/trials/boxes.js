@@ -2,7 +2,7 @@ import {numberBoxes} from "../lib/markup/numberBoxes";
 import {jsPsych} from "jspsych-react";
 import total_earnings from "../lib/summaryStatistics";
 
-console.log(total_earnings)
+jsPsych.data.addProperties({earnings: 0})
 
 const boxes = (type, gamble) => {
   let left = null;
@@ -27,17 +27,22 @@ const boxes = (type, gamble) => {
       trial_duration: duration,
       on_finish: (data) => {
         if (data.key_press === 70) {
-          total_earnings += parseInt(gamble.certain_outcome)
+          data.earnings = parseFloat(gamble.certain_outcome)
+          console.log(parseFloat(gamble.certain_outcome))
         }
         else if (data.key_press === 74) {
           if (gamble.outcome === "win") {
-            total_earnings += parseInt(gamble.potential_win)
+            data.earnings = parseFloat(gamble.potential_win)
+            console.log(parseFloat(gamble.potential_win))
           }
-          else if (gamble.outcome === "loss") {
-            total_earnings += parseInt(gamble.potential_loss)
+          else if (gamble.outcome === "lose") {
+            data.earnings = parseFloat(gamble.potential_loss)
+            console.log(parseFloat(gamble.potential_loss))
           }
         }
-        console.log(total_earnings)
+        console.log(data.earnings)
+        console.log(data)
+        // console.log(jsPsych.data.get().csv)
       }
     };
 

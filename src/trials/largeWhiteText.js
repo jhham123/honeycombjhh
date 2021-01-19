@@ -1,5 +1,4 @@
 import {jsPsych} from "jspsych-react";
-// "jspsych/plugins/jspsych-image-keyboard-response.js"
 
 const largeWhiteText = (string, duration) => {
   if (duration === null) {

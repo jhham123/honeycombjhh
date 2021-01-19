@@ -4,6 +4,7 @@ import readGambles from "../lib/readGambles";
 import {jitter, shuffle} from "../lib/utils";
 import gambleBlock from "./gambleBlock";
 import happinessBlock from "./happinessBlock";
+import {jsPsych} from "jspsych-react";
 
 const session = () => {
   let gambles = readGambles();
