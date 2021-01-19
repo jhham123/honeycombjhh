@@ -3,6 +3,7 @@ import {jsPsych} from "jspsych-react";
 import total_earnings from "../lib/summaryStatistics";
 
 jsPsych.data.addProperties({earnings: 0})
+jsPsych.data.addProperties({trial_tag: null})
 
 const boxes = (type, gamble) => {
   let left = null;
@@ -26,23 +27,18 @@ const boxes = (type, gamble) => {
       response_ends_trial: true,
       trial_duration: duration,
       on_finish: (data) => {
+        data.trial_tag = type
         if (data.key_press === 70) {
           data.earnings = parseFloat(gamble.certain_outcome)
-          console.log(parseFloat(gamble.certain_outcome))
         }
         else if (data.key_press === 74) {
           if (gamble.outcome === "win") {
             data.earnings = parseFloat(gamble.potential_win)
-            console.log(parseFloat(gamble.potential_win))
           }
           else if (gamble.outcome === "lose") {
             data.earnings = parseFloat(gamble.potential_loss)
-            console.log(parseFloat(gamble.potential_loss))
           }
         }
-        console.log(data.earnings)
-        console.log(data)
-        // console.log(jsPsych.data.get().csv)
       }
     };
 
@@ -52,12 +48,40 @@ const boxes = (type, gamble) => {
     rightBot = gamble.potential_loss;
     duration = 6000;
 
+    let boxesHTML = numberBoxes(left, rightTop, rightBot);
+
+    return {
+      name: type,
+      type: "html_keyboard_response",
+      choices: jsPsych.NO_KEYS,
+      stimulus: boxesHTML,
+      response_ends_trial: false,
+      trial_duration: duration,
+      on_finish: (data) => {
+        data.trial_tag = type
+      }
+    };
+
 
   } else if (type === "gamble_outcome_win") {
     left = null;
     rightTop = gamble.potential_win;
     rightBot = null;
     duration = 1000;
+
+    let boxesHTML = numberBoxes(left, rightTop, rightBot);
+
+    return {
+      name: type,
+      type: "html_keyboard_response",
+      choices: jsPsych.NO_KEYS,
+      stimulus: boxesHTML,
+      response_ends_trial: false,
+      trial_duration: duration,
+      on_finish: (data) => {
+        data.trial_tag = type
+      }
+    };
 
 
   } else if (type === "gamble_outcome_lose") {
@@ -66,18 +90,21 @@ const boxes = (type, gamble) => {
     rightBot = gamble.potential_loss;
     duration = 1000;
 
+    let boxesHTML = numberBoxes(left, rightTop, rightBot);
+
+    return {
+      name: type,
+      type: "html_keyboard_response",
+      choices: jsPsych.NO_KEYS,
+      stimulus: boxesHTML,
+      response_ends_trial: false,
+      trial_duration: duration,
+      on_finish: (data) => {
+        data.trial_tag = type
+      }
+    };
+
   }
-
-  let boxesHTML = numberBoxes(left, rightTop, rightBot);
-
-  return {
-    name: type,
-    type: "html_keyboard_response",
-    choices: jsPsych.NO_KEYS,
-    stimulus: boxesHTML,
-    response_ends_trial: false,
-    trial_duration: duration
-  };
 
 };
 

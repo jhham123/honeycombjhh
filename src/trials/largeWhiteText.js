@@ -7,6 +7,9 @@ const largeWhiteText = (string, duration) => {
       choices: jsPsych.NO_KEYS,
       stimulus: `<div class="large-white-text">${string}</div>`,
       response_ends_trial: false,
+      on_finish: (data) => {
+        data.trial_tag = "white_text"
+      }
     }
   }
   return {
@@ -14,7 +17,10 @@ const largeWhiteText = (string, duration) => {
     choices: jsPsych.NO_KEYS,
     stimulus: `<div class="large-white-text">${string}</div>`,
     response_ends_trial: false,
-    trial_duration: duration
+    trial_duration: duration,
+    on_finish: (data) => {
+      data.trial_tag = "white_text"
+    }
   }
 
 };

@@ -9,7 +9,10 @@ const fixation = duration => {
     choices: jsPsych.NO_KEYS,
     stimulus: stimulus,
     response_ends_trial: false,
-    trial_duration: duration
+    trial_duration: duration,
+    on_finish: (data) => {
+      data.trial_tag = "fixation"
+    }
   };
 };
 
