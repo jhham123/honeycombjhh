@@ -7,8 +7,9 @@ import experimentEnd from "../trials/experimentEnd";
 import experimentEndBuffer from "../trials/experimentEndBuffer";
 import survey from "../trials/survey";
 import textInput from "../trials/textInput";
+import animation from "../trials/animation";
 import {jsPsych} from "jspsych-react";
 
-const primaryTimeline = [preamble, survey(), textInput(), session(), experimentEnd(), experimentEndBuffer()];
+const primaryTimeline = [preamble,  animation, survey(), textInput(), session(), experimentEnd(), experimentEndBuffer()];
 
 export const tl = primaryTimeline;
