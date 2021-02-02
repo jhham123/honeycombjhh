@@ -18,7 +18,6 @@ const session = () => {
     all_gamble_blocks.splice(itemIndex, 0, happinessBlock())
     increment = Math.floor(Math.random() * (4 - 3 + 1) + 3)
   }
-  console.log(all_gamble_blocks);
 
   return {
     type: "html_keyboard_response",
