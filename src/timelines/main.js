@@ -12,10 +12,14 @@ import wheel from "../trials/wheel";
 import {jsPsych} from "jspsych-react";
 import webgazerCamera from "../trials/webgazerCamera";
 
-// const primaryTimeline = [preamble,  animation, survey(), textInput(), session(), experimentEnd(), experimentEndBuffer()];
-console.log(jsPsych)
+// a timeline highlighting several trial types
+const primaryTimeline = [preamble,  animation, survey(), textInput(), session(), experimentEnd(), experimentEndBuffer()];
 
-const primaryTimeline = [preamble, wheel()];
+// a simplified timeline showing just the wheel trial
+//const primaryTimeline = [preamble, wheel()];
+
+// preliminary code showing webgazer functionality.
+// Webgazer is a eye tracking software from Brown
 
 // jsPsych.init({
 //   timeline: primaryTimeline,

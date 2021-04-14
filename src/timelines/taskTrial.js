@@ -3,6 +3,7 @@ import fixation from '../trials/fixation'
 import showCondition from '../trials/showCondition'
 import taskEnd from '../trials/taskEnd'
 
+// default code; not used
 
 const taskTrial = (blockSettings, blockDetails, condition) => {
   // initialize trial details

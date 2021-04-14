@@ -1,3 +1,8 @@
+/**
+ * Consumes a dictionary of 12 numbers (labled with letters) and build a wheel out of them
+ * using CSS components defined in App.css
+ */
+
 export const makeWheel = (nums) => {
 
   return `<div class="container">

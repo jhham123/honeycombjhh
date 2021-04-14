@@ -1,6 +1,8 @@
 import taskTrial from './taskTrial'
 import { generateStartingOpts } from '../lib/taskUtils'
 
+// default code; not used
+
 const taskBlock = (blockSettings) => {
   // initialize block
 	const startingOpts = generateStartingOpts(blockSettings)

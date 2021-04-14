@@ -1,27 +1,19 @@
 import {jsPsych} from "jspsych-react";
 import {makeWheel} from "../lib/markup/makeWheel";
 import readWheelNumbers from "../lib/readWheelNumbers";
-import webgazer from 'webgazer'
 
-import vars from "../App.scss"
 
-// console.log(vars)
-// webgazer.setGazeListener(function(data, elapsedTime) {
-//     var xprediction = data.x;
-//     var yprediction = data.y;
-//     console.log("hello")
-// }).begin();
-
+/**
+ * This trial reads from a file to learn the values to show on a wheel
+ * and then spins that wheel. see makeWheel() and readWheelNumbers for more information. 
+ * 
+ * The on_load function is used to run javascript after the trial has loaded. In this case,
+ * it is used to start a CSS animation.
+ */
 const wheel = () => {
 
     let wheelHTML = makeWheel(readWheelNumbers());
 
-    // const spinButton = document.getElementById('spin');
-    // const dial = document.querySelector('.dial');
-    // spinButton.addEventListener('click', () => {
-    //   dial.classList.toggle("spinning");
-    //   document.querySelector('content-container').classList.toggle('activated');
-    // });
 
     return {
       type: "html_keyboard_response",

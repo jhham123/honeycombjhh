@@ -1,21 +1,4 @@
-// import {jsPsych} from "jspsych-react";
-// import wheel from '../img/wheel.png';
-//
-// const animation = duration => {
-//   let stimulus = `<img class="wheel" src="${wheel}"></img>`;
-//
-//   return {
-//     type: "html_keyboard_response",
-//     choices: jsPsych.NO_KEYS,
-//     stimulus: stimulus,
-//     response_ends_trial: false,
-//     trial_duration: duration,
-//     on_finish: (data) => {
-//       data.trial_tag = "animation"
-//     }
-//   };
-// };
-//
+
 // export default animation;
 import up from '../img/up.png'
 import down from '../img/down.png'

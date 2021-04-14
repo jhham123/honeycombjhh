@@ -1,5 +1,13 @@
 import {jsPsych} from "jspsych-react";
 
+/**
+ * This trial is used to show large white text for a fixed duration. It
+ * consumes the string it should show as well as the duration. It relies on the 
+ * CSS definition of the class "large-white-text" which is given in App.css
+ * 
+ * If no duration is given, the duration is controlled by the caller. This case 
+ * is not used, but could be useful. 
+ */
 const largeWhiteText = (string, duration) => {
   if (duration === null) {
     return {

@@ -6,6 +6,18 @@ import gambleBlock from "./gambleBlock";
 import happinessBlock from "./happinessBlock";
 import {jsPsych} from "jspsych-react";
 
+/*
+This is a meta timeline which consists of several gamble blocks. 
+This is also where the gambles file is consumed (using readGambles()).
+
+The contents of the gambles file is parsed into several gambleBlocks whcih are then shown
+sequentially.
+
+The splicing operation adds a happinessBlock after every third gambleBlock.
+
+This structure allows the experimenter to provide an arbitrary number of gambles while
+preserving the structure: gamble, gamble, gamble, happiness, gamble, gamble, gamble, happiness, ...
+*/
 const session = () => {
   let gambles = readGambles();
   let all_gamble_blocks = gambles.map(gamble => gambleBlock(gamble));

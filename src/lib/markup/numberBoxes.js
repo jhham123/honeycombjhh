@@ -1,3 +1,8 @@
+/**
+ * Used in boxes.js to build a confugration of boxes for displaying gambles.
+ * Consumes values for boxes or null if the box should not show. 
+ * Relies on CSS components defined in App.css
+ */
 export const numberBoxes = (left, rightTop, rightBot) => {
   if (left !== null && rightTop !== null && rightBot !== null) {
     return `
