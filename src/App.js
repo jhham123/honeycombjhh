@@ -6,6 +6,8 @@ import './App.scss'
 import 'bootstrap/dist/css/bootstrap.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import { getTurkUniqueId, sleep } from './lib/utils'
+import webgazer from 'webgazer'
+
 
 let ipcRenderer = false;
 let psiturk = false
@@ -23,6 +25,8 @@ class App extends React.Component {
   render() {
     console.log("Outside Turk:", jsPsych.turk.turkInfo().outsideTurk)
     console.log("Turk:", MTURK)
+    // insert plugin
+
 
     return (
       <div className="App">

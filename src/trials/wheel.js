@@ -1,10 +1,16 @@
 import {jsPsych} from "jspsych-react";
 import {makeWheel} from "../lib/markup/makeWheel";
 import readWheelNumbers from "../lib/readWheelNumbers";
+import webgazer from 'webgazer'
 
 import vars from "../App.scss"
 
-console.log(vars)
+// console.log(vars)
+// webgazer.setGazeListener(function(data, elapsedTime) {
+//     var xprediction = data.x;
+//     var yprediction = data.y;
+//     console.log("hello")
+// }).begin();
 
 const wheel = () => {
 
