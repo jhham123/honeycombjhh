@@ -9,11 +9,12 @@ import survey from "../trials/survey";
 import textInput from "../trials/textInput";
 import animation from "../trials/animation";
 import wheel from "../trials/wheel";
+import wheel2 from "../trials/wheel2";
 import {jsPsych} from "jspsych-react";
 import webgazerCamera from "../trials/webgazerCamera";
 
 // a timeline highlighting several trial types
-const primaryTimeline = [preamble,  animation, survey(), textInput(), session(), experimentEnd(), experimentEndBuffer()];
+const primaryTimeline = [preamble, wheel(), wheel2(), survey()];
 
 // a simplified timeline showing just the wheel trial
 //const primaryTimeline = [preamble, wheel()];

@@ -1,0 +1,60 @@
+{
+  "_from": "mouseviewjs",
+  "_id": "mouseviewjs@0.1.17",
+  "_inBundle": false,
+  "_integrity": "sha512-P7qMhtTOwi7h60LVvQaB3T8guqiBm7xeF/3J5WxbDRqZzkrxYgIGjof0JXU4aIboYoeWIRLNg0BlDnSCyFZdoQ==",
+  "_location": "/mouseviewjs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "mouseviewjs",
+    "name": "mouseviewjs",
+    "escapedName": "mouseviewjs",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/mouseviewjs/-/mouseviewjs-0.1.17.tgz",
+  "_shasum": "75a6f9b9d6fb29ce92f73aa20da0b517b49c5ef0",
+  "_spec": "mouseviewjs",
+  "_where": "C:\\Users\\hamha\\honeycomb",
+  "author": {
+    "name": "Alexander Anwyl-Irvine",
+    "email": "Alexander.Irvine@mrc-cbu.cam.ac.uk",
+    "url": "https://www.irvine.science"
+  },
+  "bugs": {
+    "url": "https://github.com/u01ai11/MouseView.js/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "MouseView.js is a library for presenting mouse-tracking view-window tasks and experiments ",
+  "files": [
+    "MouseView.mjs",
+    "MouseView.js",
+    "LICENSE"
+  ],
+  "homepage": "https://mouseview.org",
+  "keywords": [
+    "UX",
+    "Research",
+    "Mouse",
+    "Tracking",
+    "Scientific",
+    "Research"
+  ],
+  "license": "MIT",
+  "main": "MouseView.js",
+  "name": "mouseviewjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/u01ai11/MouseView.js.git"
+  },
+  "type": "module",
+  "version": "0.1.17"
+}

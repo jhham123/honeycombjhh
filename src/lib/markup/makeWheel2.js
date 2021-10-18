@@ -3,7 +3,7 @@
  * using CSS components defined in App.css
  */
 
-export const makeWheel = (nums) => {
+export const makeWheel2 = (nums) => {
 
   return `<div class="container">
   	<div class="board">

@@ -1,8 +1,7 @@
 import {jsPsych} from "jspsych-react";
-import {makeWheel} from "../lib/markup/makeWheel";
-import readWheelNumbers from "../lib/readWheelNumbers";
+import {makeWheel2} from "../lib/markup/makeWheel2";
+import readWheelNumbers2 from "../lib/readWheelNumbers2";
 import {lang} from "../config/main";
-import mouseview from "../lib/mouseview/MouseView.js"
 
 /**
  * This trial reads from a file to learn the values to show on a wheel
@@ -10,19 +9,10 @@ import mouseview from "../lib/mouseview/MouseView.js"
  *
  * The on_load function is used to run javascript after the trial has loaded. In this case,
  * it is used to start a CSS animation.
-*/
-mouseview.init()
+ */
+const wheel2 = () => {
 
-var mouseview_trial_start = ()=> {
-  mouseview.logEvent('Trial Started')
-}
-var mouseview_trial_end = ()=> {
-  mouseview.logEvent('Trial Ended')
-}
-
-const wheel = () => {
-
-    let wheelHTML = makeWheel(readWheelNumbers());
+    let wheelHTML = makeWheel2(readWheelNumbers2());
 
 
     return {
@@ -37,15 +27,4 @@ const wheel = () => {
       choices: [lang.prompt.continue.button]
     }
 }
-
-window.addEventListener('keydown', function startWheel(e){
-   if(e.keyCode == 65){
-     document.querySelector('.dial').classList.add("spinning");
-   }
-   if(e.keyCode == 66){
-     document.querySelector('.dial').classList.add("stopping");
-   }
-
-});
-
-export default wheel;
+export default wheel2;

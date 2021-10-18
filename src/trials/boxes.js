@@ -1,16 +1,15 @@
 import {numberBoxes} from "../lib/markup/numberBoxes";
 import {jsPsych} from "jspsych-react";
-import total_earnings from "../lib/summaryStatistics";
 
 jsPsych.data.addProperties({earnings: 0})
 jsPsych.data.addProperties({trial_tag: null})
 
 
 /**
- * This trial is used to show all configurations of gamble boxes. This includes 
- * showing the certain outcome vs. the gamble, the gamble alone, and the outcome of the 
- * gamble. 
- * 
+ * This trial is used to show all configurations of gamble boxes. This includes
+ * showing the certain outcome vs. the gamble, the gamble alone, and the outcome of the
+ * gamble.
+ *
  * The trial consumes a tuple where the first element is a string indicating the configuration
  * of boxes to be shown and the second element is a gamble object from which boxes can fetch
  * the data it should show in each box (i.e. the monetary values, or if the gamble won)
