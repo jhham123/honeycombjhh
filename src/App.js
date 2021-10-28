@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import { getTurkUniqueId, sleep } from './lib/utils'
 import webgazer from 'webgazer'
-import mouseview from "./lib/mouseview/Mouseview.js"
+import mouseview from "mouseviewjs"
 
 
 let ipcRenderer = false;

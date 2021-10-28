@@ -2,7 +2,7 @@ import {jsPsych} from "jspsych-react";
 import {makeWheel} from "../lib/markup/makeWheel";
 import readWheelNumbers from "../lib/readWheelNumbers";
 import {lang} from "../config/main";
-import mouseview from "../lib/mouseview/MouseView.js"
+import mouseview from "mouseviewjs"
 
 /**
  * This trial reads from a file to learn the values to show on a wheel
@@ -11,13 +11,13 @@ import mouseview from "../lib/mouseview/MouseView.js"
  * The on_load function is used to run javascript after the trial has loaded. In this case,
  * it is used to start a CSS animation.
 */
-mouseview.init()
+
 
 var mouseview_trial_start = ()=> {
-  mouseview.logEvent('Trial Started')
+  //mouseview.logEvent('Trial Started')
 }
 var mouseview_trial_end = ()=> {
-  mouseview.logEvent('Trial Ended')
+  //mouseview.logEvent('Trial Ended')
 }
 
 const wheel = () => {
@@ -30,7 +30,7 @@ const wheel = () => {
       stimulus: wheelHTML,
       response_ends_trial: true,
       prompt: "<p style='color:white'>Press on A to start the wheel and B to stop the wheel.</button>",
-
+      on_start: mouseview_trial_start,
       on_finish: (data) => {
         data.trial_tag = "wheel"
       },

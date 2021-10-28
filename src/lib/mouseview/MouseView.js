@@ -8,6 +8,8 @@
 * The heatmap function is built on simpleheat.js (Copyright (c) 2015, Vladimir Agafonkin) https://github.com/mourner/simpleheat
 */
 
+import * as mouseview from 'mouseviewjs'
+import window_holder from 'html2canvas'
 
 
 (function(window, undefined) {
@@ -6856,7 +6858,7 @@
                 var _a, font, fontFamily, fontSize;
                 var _this = this;
                 return __generator(this, function (_b) {
-                    _a = this.createFontStyle(styles), font = _a[0], fontFamily = _a[1], fontSize = _a[2];
+                    //_a = this.createFontStyle(styles), font = _a[0], fontFamily = _a[1], fontSize = _a[2];
                     this.ctx.font = font;
                     text.textBounds.forEach(function (text) {
                         _this.ctx.fillStyle = asString(styles.color);
@@ -6926,7 +6928,7 @@
                             container = paint.container;
                             curves = paint.curves;
                             styles = container.styles;
-                            _i = 0, _a = container.textNodes;
+                            //_i = 0, _a = container.textNodes;
                             _b.label = 1;
                         case 1:
                             if (!(_i < _a.length)) return [3 /*break*/, 4];
@@ -7101,7 +7103,7 @@
                             // https://www.w3.org/TR/css-position-3/#painting-order
                             // 1. the background and borders of the element forming the stacking context.
                             _p.sent();
-                            _i = 0, _a = stack.negativeZIndex;
+                            //_i = 0, _a = stack.negativeZIndex;
                             _p.label = 2;
                         case 2:
                             if (!(_i < _a.length)) return [3 /*break*/, 5];
@@ -7119,7 +7121,7 @@
                         case 6:
                             // 3. For all its in-flow, non-positioned, block-level descendants in tree order:
                             _p.sent();
-                            _b = 0, _c = stack.nonInlineLevel;
+                            //_b = 0, _c = stack.nonInlineLevel;
                             _p.label = 7;
                         case 7:
                             if (!(_b < _c.length)) return [3 /*break*/, 10];
@@ -7132,7 +7134,7 @@
                             _b++;
                             return [3 /*break*/, 7];
                         case 10:
-                            _d = 0, _e = stack.nonPositionedFloats;
+                            //_d = 0, _e = stack.nonPositionedFloats;
                             _p.label = 11;
                         case 11:
                             if (!(_d < _e.length)) return [3 /*break*/, 14];
@@ -7145,7 +7147,7 @@
                             _d++;
                             return [3 /*break*/, 11];
                         case 14:
-                            _f = 0, _g = stack.nonPositionedInlineLevel;
+                            //_f = 0, _g = stack.nonPositionedInlineLevel;
                             _p.label = 15;
                         case 15:
                             if (!(_f < _g.length)) return [3 /*break*/, 18];
@@ -7158,7 +7160,7 @@
                             _f++;
                             return [3 /*break*/, 15];
                         case 18:
-                            _h = 0, _j = stack.inlineLevel;
+                            //_h = 0, _j = stack.inlineLevel;
                             _p.label = 19;
                         case 19:
                             if (!(_h < _j.length)) return [3 /*break*/, 22];
@@ -7171,7 +7173,7 @@
                             _h++;
                             return [3 /*break*/, 19];
                         case 22:
-                            _k = 0, _l = stack.zeroOrAutoZIndexOrTransformedOrOpacity;
+                            //_k = 0, _l = stack.zeroOrAutoZIndexOrTransformedOrOpacity;
                             _p.label = 23;
                         case 23:
                             if (!(_k < _l.length)) return [3 /*break*/, 26];
@@ -7184,7 +7186,7 @@
                             _k++;
                             return [3 /*break*/, 23];
                         case 26:
-                            _m = 0, _o = stack.positiveZIndex;
+                            //_m = 0, _o = stack.positiveZIndex;
                             _p.label = 27;
                         case 27:
                             if (!(_m < _o.length)) return [3 /*break*/, 30];
@@ -7277,19 +7279,19 @@
                                             return [3 /*break*/, 4];
                                         case 4:
                                             if (image) {
-                                                _a = calculateBackgroundRendering(container, index, [
-                                                    image.width,
-                                                    image.height,
-                                                    image.width / image.height
-                                                ]), path = _a[0], x = _a[1], y = _a[2], width = _a[3], height = _a[4];
+                                                //_a = calculateBackgroundRendering(container, index, [
+                                                //    image.width,
+                                                //    image.height,
+                                                //    image.width / image.height]),
+                                                //path = _a[0], x = _a[1], y = _a[2], width = _a[3], height = _a[4];
                                                 pattern = this_1.ctx.createPattern(this_1.resizeImage(image, width, height), 'repeat');
                                                 this_1.renderRepeat(path, pattern, x, y);
                                             }
                                             return [3 /*break*/, 6];
                                         case 5:
                                             if (isLinearGradient(backgroundImage)) {
-                                                _b = calculateBackgroundRendering(container, index, [null, null, null]), path = _b[0], x = _b[1], y = _b[2], width = _b[3], height = _b[4];
-                                                _c = calculateGradientDirection(backgroundImage.angle, width, height), lineLength = _c[0], x0 = _c[1], x1 = _c[2], y0 = _c[3], y1 = _c[4];
+                                                //_b = calculateBackgroundRendering(container, index, [null, null, null]), path = _b[0], x = _b[1], y = _b[2], width = _b[3], height = _b[4];
+                                                //_c = calculateGradientDirection(backgroundImage.angle, width, height), lineLength = _c[0], x0 = _c[1], x1 = _c[2], y0 = _c[3], y1 = _c[4];
                                                 canvas = document.createElement('canvas');
                                                 canvas.width = width;
                                                 canvas.height = height;
@@ -7306,15 +7308,15 @@
                                                 }
                                             }
                                             else if (isRadialGradient(backgroundImage)) {
-                                                _d = calculateBackgroundRendering(container, index, [
-                                                    null,
-                                                    null,
-                                                    null
-                                                ]), path = _d[0], left = _d[1], top_1 = _d[2], width = _d[3], height = _d[4];
+                                                //_d = calculateBackgroundRendering(container, index, [
+                                                //    null,
+                                                //    null,
+                                                //    null]),
+                                                // path = _d[0], left = _d[1], top_1 = _d[2], width = _d[3], height = _d[4];
                                                 position = backgroundImage.position.length === 0 ? [FIFTY_PERCENT] : backgroundImage.position;
                                                 x = getAbsoluteValue(position[0], width);
                                                 y = getAbsoluteValue(position[position.length - 1], height);
-                                                _e = calculateRadius(backgroundImage, x, y, width, height), rx = _e[0], ry = _e[1];
+                                                // _e = calculateRadius(backgroundImage, x, y, width, height), rx = _e[0], ry = _e[1];
                                                 if (rx > 0 && rx > 0) {
                                                     radialGradient_1 = this_1.ctx.createRadialGradient(left + x, top_1 + y, 0, left + x, top_1 + y, rx);
                                                     processColorStops(backgroundImage.stops, rx * 2).forEach(function (colorStop) {
@@ -7347,7 +7349,7 @@
                                 });
                             };
                             this_1 = this;
-                            _i = 0, _a = container.styles.backgroundImage.slice(0).reverse();
+                            // _i = 0, _a = container.styles.backgroundImage.slice(0).reverse();
                             _b.label = 1;
                         case 1:
                             if (!(_i < _a.length)) return [3 /*break*/, 4];
@@ -7432,7 +7434,7 @@
                             _a.label = 2;
                         case 2:
                             side = 0;
-                            _i = 0, borders_1 = borders;
+                            // _i = 0, borders_1 = borders;
                             _a.label = 3;
                         case 3:
                             if (!(_i < borders_1.length)) return [3 /*break*/, 7];
@@ -7579,7 +7581,7 @@
                         throw new Error("Document is not attached to a Window");
                     }
                     instanceName = (Math.round(Math.random() * 1000) + Date.now()).toString(16);
-                    _a = isBodyElement(element) || isHTMLElement(element) ? parseDocumentSize(ownerDocument) : parseBounds(element), width = _a.width, height = _a.height, left = _a.left, top = _a.top;
+                    // _a = isBodyElement(element) || isHTMLElement(element) ? parseDocumentSize(ownerDocument) : parseBounds(element), width = _a.width, height = _a.height, left = _a.left, top = _a.top;
                     defaultResourceOptions = {
                         allowTaint: false,
                         imageTimeout: 15000,
