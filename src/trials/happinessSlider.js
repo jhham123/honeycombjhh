@@ -4,15 +4,21 @@
  * which ranges from 0-100 (i.e. step = 10 indicates 10 choices on the slider, because 100/10 = 10)
  */
 
+ function getRandomInt(min, max) {
+   min = Math.ceil(min);
+   max = Math.floor(max);
+   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+ }
+
 const happinessSlider = {
   type: "html_slider_response",
   stimulus: '<div class="happiness-text-slider">How happy are you at this moment?</div>',
   labels: ["very unhappy", "very happy"],
   require_movement: true,
   button_label: "Continue",
-  trial_duration: 4000,
+  start: getRandomInt(0,100),
   response_ends_trial: true,
-  step: 10,
+  step: 12.5,
   on_finish: (data) => {
     data.trial_tag = "happiness_slider"
   }
