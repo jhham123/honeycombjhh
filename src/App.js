@@ -8,6 +8,8 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import { getTurkUniqueId, sleep } from './lib/utils'
 import webgazer from 'webgazer'
 import mouseview from "mouseviewjs"
+import { msmrTrain } from "./lib/msmrTrain";
+import { browserCheck } from "./lib/jspsych-screen-check"
 
 
 let ipcRenderer = false;
@@ -27,8 +29,8 @@ class App extends React.Component {
     console.log("Outside Turk:", jsPsych.turk.turkInfo().outsideTurk)
     console.log("Turk:", MTURK)
     // insert plugin
-
-
+		jsPsych.plugins['msmr-train'] = msmrTrain();
+		jsPsych.plugins['screen-check'] = browserCheck();
     return (
       <div className="App">
         <Experiment settings={{

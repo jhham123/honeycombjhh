@@ -1,11 +1,11 @@
 import {lang} from "../config/main";
 
-const review3 = () => {
+const review1 = () => {
   return {
     type: "html_button_response",
-    stimulus: '<div class="happiness-text-slider">You lost $8 on the third wheel.</div>',
+    stimulus: '<div class="happiness-text-slider">Your running bonus so far is -$1.</div>',
     choices: [lang.prompt.continue.button]
   };
 };
 
-export default review3;
+export default review1;

@@ -3,7 +3,7 @@ import {lang} from "../config/main";
 const review2 = () => {
   return {
     type: "html_button_response",
-    stimulus: '<div class="happiness-text-slider">You won $6 on the second wheel.</div>',
+    stimulus: "<div class='happiness-text-slider'>Your final bonus is -$2.</div>",
     choices: [lang.prompt.continue.button]
   };
 };

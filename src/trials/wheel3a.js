@@ -1,5 +1,5 @@
 import {jsPsych} from "jspsych-react";
-import {makeWheel} from "../lib/markup/makeWheel";
+import {makeWheel} from "../lib/markup/makeMaskedWheel2";
 import readWheelNumbers3 from "../lib/readWheelNumbers3";
 import {lang} from "../config/main";
 import * as mouseview from "mouseviewjs"
@@ -16,25 +16,33 @@ var mouseview_trial_start = ()=> {
   console.log(window.mouseview)
   window.mouseview.init()
   window.mouseview.logEvent('Trial Started')
+	window.mouseview.startTracking()
+	const urlParams = new URLSearchParams(window.location.search);
+	const width = urlParams.get('min_width') || 12000;
+	const height = urlParams.get('min_height') || 8000;
 }
-var mouseview_trial_end = ()=> {
-  window.mouseview.logEvent('Trial Ended')
+
+var mouseview_trial_end = (data)=> {
+	window.mouseview.logEvent('Trial Ended')
+	window.mouseview.stopTracking()
+	window.mouseview.storeData()
   window.mouseview.removeAll()
+	const mouseviewData = localStorage.getItem('mouseview_data')
+	data.trial_tag = mouseviewData
 }
 
 const wheel3a = () => {
 
     let wheelHTML = makeWheel(readWheelNumbers3());
 
-
     return {
-      type: "html_button_response",
+			type: "html_keyboard_response",
       stimulus: wheelHTML,
       response_ends_trial: true,
-      prompt: "<p style='color:white'>Press on continue when you are ready.</button>",
-      on_start: mouseview_trial_start,
+      on_load: mouseview_trial_start,
       on_finish: mouseview_trial_end,
-      choices: [lang.prompt.continue.button]
+			trial_duration: 15000,
+      choices: "NO_KEYS",
     }
 }
 

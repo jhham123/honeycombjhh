@@ -1,5 +1,5 @@
 import {jsPsych} from "jspsych-react";
-import {makeWheel} from "../lib/markup/makeWheel";
+import {makeWheel} from "../lib/markup/makeMaskedWheel";
 import readWheelNumbers2 from "../lib/readWheelNumbers2";
 import {lang} from "../config/main";
 import * as mouseview from "mouseviewjs"
@@ -12,29 +12,16 @@ import * as mouseview from "mouseviewjs"
  * it is used to start a CSS animation.
 */
 
-const wheel2b = () => {
+const wheel2b = (bonus) => {
 
     let wheelHTML = makeWheel(readWheelNumbers2());
-
-
     return {
       type: "html_button_response",
       stimulus: wheelHTML,
       response_ends_trial: true,
-      on_load: () => {
-        const dial = document.querySelector('.dial');
-        dial.classList.toggle("spinning");
-      },
-      prompt: "<p style='color:white'>Press on B to stop the wheel.</button>",
+      prompt: "<p style='color:white'>Your total bonus winnings so far is "+ bonus +"</button>",
       choices: [lang.prompt.continue.button]
     }
-}
-
-document.addEventListener('keydown', function startWheel(e){
-   if(e.keyCode == 66){
-     document.querySelector('.dial').classList.add("stopping");
-   }
-
-});
+};
 
 export default wheel2b;

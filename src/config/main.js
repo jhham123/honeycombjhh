@@ -16,6 +16,26 @@ const keys = {
 	"space": 32
 }
 
+const overtLookup = {
+  '68': 'D',
+  '75': 'K',
+  '66': 'B',
+  '85': 'U',
+}
+
+const cognLookup = {
+  '48': '0',
+  '49': '1',
+  '50': '2',
+  '51': '3',
+  '52': '4',
+  '53': '5',
+  '54': '6',
+  '55': '7',
+  '56': '8',
+  '57': '9',
+};
+
 // is this mechanical turk?
 const MTURK = (!jsPsych.turk.turkInfo().outsideTurk)
 const AT_HOME = (process.env.REACT_APP_AT_HOME === 'true')
@@ -47,6 +67,8 @@ export {
 	defaultBlockSettings,
 	lang,
 	eventCodes,
+	overtLookup,
+	cognLookup,
 	MTURK,
 	AT_HOME,
 	IS_ELECTRON
