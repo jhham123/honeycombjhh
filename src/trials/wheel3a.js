@@ -1,7 +1,7 @@
 
 import {makeWheel} from "../lib/markup/makeMaskedWheel2";
 import readWheelNumbers3 from "../lib/readWheelNumbers3";
-
+import * as mouseview from "mouseviewjs"
 /**
  * This trial reads from a file to learn the values to show on a wheel
  * and then spins that wheel. see makeWheel() and readWheelNumbers for more information.

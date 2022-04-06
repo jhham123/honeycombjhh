@@ -1,7 +1,7 @@
 
 import {makeWheel} from "../lib/markup/makeMaskedWheel2";
 import readWheelNumbers from "../lib/readWheelNumbers";
-
+import * as mouseview from "mouseviewjs"
 
 /**
  * This trial reads from a file to learn the values to show on a wheel
@@ -16,8 +16,6 @@ var mouseview_trial_start = ()=> {
 	window.mouseview.init()
   window.mouseview.logEvent('Trial Started')
 	window.mouseview.startTracking()
-
-
 }
 
 var mouseview_trial_end = (data)=> {

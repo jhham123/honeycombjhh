@@ -16,9 +16,9 @@ const happinessSlider = {
   labels: ["very unhappy", "very happy"],
   require_movement: true,
   button_label: "Continue",
-  start: getRandomInt(0,100),
+  start: getRandomInt(10,90),
   response_ends_trial: true,
-  step: 12.5,
+  step: 1,
   on_finish: (data) => {
     data.trial_tag = "happiness_slider"
   }
