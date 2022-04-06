@@ -36,22 +36,9 @@ import wheel12c from "../trials/wheel12c";
 import wheelp from "../trials/wheelp";
 import waiting from "../trials/waiting";
 import waiting2 from "../trials/waiting2";
-import waiting3 from "../trials/waiting3";
-import trainTrial from "../trials/trainTrial";
-import session from "./session";
 import happinessSlider from "../trials/happinessSlider";
 import worrySlider from "../trials/worrySlider";
 import anxietySlider from "../trials/anxietySlider";
-import happinessBlock from "./happinessBlock";
-import largeWhiteText from "../trials/largeWhiteText";
-import experimentEnd from "../trials/experimentEnd";
-import experimentEndBuffer from "../trials/experimentEndBuffer";
-import survey from "../trials/survey";
-import textInput from "../trials/textInput";
-import animation from "../trials/animation";
-import {jsPsych} from "jspsych-react";
-import webgazerCamera from "../trials/webgazerCamera";
-
 
 function getRandomInt(min, max) {
 	min = Math.ceil(min);

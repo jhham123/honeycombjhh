@@ -1,5 +1,5 @@
 import { pdSpotEncode } from '../lib/markup/photodiode';
-import { eventCodes, overtKeys } from '../config/main';
+import { eventCodes } from '../config/main';
 import { jsPsych } from "jspsych-react";
 
 const trainTrial = () => {

@@ -1,13 +1,10 @@
-import fixation from "../trials/fixation";
-import boxes from "../trials/boxes";
 import readGambles from "../lib/readGambles";
-import {jitter, shuffle} from "../lib/utils";
+import {shuffle} from "../lib/utils";
 import gambleBlock from "./gambleBlock";
 import happinessBlock from "./happinessBlock";
-import {jsPsych} from "jspsych-react";
 
 /*
-This is a meta timeline which consists of several gamble blocks. 
+This is a meta timeline which consists of several gamble blocks.
 This is also where the gambles file is consumed (using readGambles()).
 
 The contents of the gambles file is parsed into several gambleBlocks whcih are then shown

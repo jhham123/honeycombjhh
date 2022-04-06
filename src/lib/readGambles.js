@@ -1,8 +1,6 @@
-"use strict";
-
 /**
  * Consumes a json file and builds the corresponding javascript object (i.e. a dictionary)
- * Reads from file gambles.json, but could be set up to read from a program defined filename is 
+ * Reads from file gambles.json, but could be set up to read from a program defined filename is
  * necessary.
  */
 const readGambles = () => {

@@ -6,8 +6,6 @@ import './App.scss'
 import 'bootstrap/dist/css/bootstrap.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import { getTurkUniqueId, sleep } from './lib/utils'
-import webgazer from 'webgazer'
-import mouseview from "mouseviewjs"
 import { msmrTrain } from "./lib/msmrTrain";
 import { browserCheck } from "./lib/jspsych-screen-check"
 

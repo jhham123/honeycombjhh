@@ -1,8 +1,8 @@
-import {jsPsych} from "jspsych-react";
+
 import {makeWheel} from "../lib/markup/makeWheel";
 import readWheelNumbers6 from "../lib/readWheelNumbers6";
 import {lang} from "../config/main";
-import * as mouseview from "mouseviewjs"
+
 
 /**
  * This trial reads from a file to learn the values to show on a wheel
@@ -12,11 +12,7 @@ import * as mouseview from "mouseviewjs"
  * it is used to start a CSS animation.
 */
 
-function getRandomInt(min, max) {
-	min = Math.ceil(min);
-	max = Math.floor(max);
-	return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-}
+
 
 const wheel6c = (result) => {
 

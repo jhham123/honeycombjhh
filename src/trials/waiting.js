@@ -17,7 +17,7 @@ const waiting = () => {
 		button_html: '<button class="jspsych-btn" id="btn">%choice%</button>',
 		on_load: () => {
 			document.getElementById("btn").style.visibility = "hidden"
-			let key_array = ['q','p','z','m']
+			// let key_array = ['q','p','z','m']
 			window.addEventListener('keydown', function (event) {
 				if (event.key === 'q') {
 					window.addEventListener('keydown', function (event) {

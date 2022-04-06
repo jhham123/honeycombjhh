@@ -1,5 +1,3 @@
-import {lang} from "../config/main";
-
 const waiting2 = () => {
   return {
     type: "html_keyboard_response",

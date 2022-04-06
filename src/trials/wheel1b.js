@@ -1,8 +1,8 @@
-import {jsPsych} from "jspsych-react";
+
 import {makeWheel} from "../lib/markup/makeMaskedWheel";
 import readWheelNumbers from "../lib/readWheelNumbers";
 import {lang} from "../config/main";
-import * as mouseview from "mouseviewjs"
+
 
 /**
  * This trial reads from a file to learn the values to show on a wheel

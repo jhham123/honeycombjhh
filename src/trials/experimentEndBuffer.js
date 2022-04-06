@@ -1,7 +1,3 @@
-import {lang} from "../config/main";
-import {baseStimulus} from "../lib/markup/stimuli";
-import {jsPsych} from "jspsych-react";
-
 const experimentEndBuffer = () => {
 
   return {

@@ -1,8 +1,7 @@
-import {jsPsych} from "jspsych-react";
+
 import {makeWheel} from "../lib/markup/makeMaskedWheel2";
 import readWheelNumbers6 from "../lib/readWheelNumbers6";
-import {lang} from "../config/main";
-import * as mouseview from "mouseviewjs"
+
 
 /**
  * This trial reads from a file to learn the values to show on a wheel
@@ -17,20 +16,18 @@ var mouseview_trial_start = ()=> {
   window.mouseview.init()
   window.mouseview.logEvent('Trial Started')
 	window.mouseview.startTracking()
-	const urlParams = new URLSearchParams(window.location.search);
-	const width = urlParams.get('min_width') || 12000;
-	const height = urlParams.get('min_height') || 8000;
+
+
 }
 
-var mouseview_trial_end = ()=> {
+var mouseview_trial_end = (data)=> {
 	window.mouseview.logEvent('Trial Ended')
 	window.mouseview.stopTracking()
 	window.mouseview.storeData()
   window.mouseview.removeAll()
-	let mouseviewData = window.mouseview.datalogger.data
+	const mouseviewData = localStorage.getItem('mouseview_data')
+	data.trial_tag = mouseviewData
 }
-
-const mouseviewData = localStorage.getItem('mouseview_data')
 
 const wheel6a = () => {
 
@@ -44,7 +41,6 @@ const wheel6a = () => {
       on_finish: mouseview_trial_end,
 			trial_duration: 15000,
       choices: "NO_KEYS",
-			data: {mouseview: mouseviewData},
     }
 }
 

@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * Reads wheel numbers from a json file and returns the corresponding javascript object.
  */
