@@ -14,20 +14,22 @@ import * as mouseview from "mouseviewjs"
 var mouseview_trial_start = ()=> {
   console.log(window.mouseview)
   window.mouseview.init()
-  window.mouseview.logEvent('Trial Started')
+  window.mouseview.logEvent('TrialStarted')
 	window.mouseview.startTracking()
 
 
 }
 
 var mouseview_trial_end = (data)=> {
-	window.mouseview.logEvent('Trial Ended')
+	window.mouseview.logEvent('TrialEnded')
 	window.mouseview.stopTracking()
 	window.mouseview.storeData()
   window.mouseview.removeAll()
 	const mouseviewData = localStorage.getItem('mouseview_data')
 	data.trial_tag = mouseviewData
 }
+
+console.log(mouseview)
 
 const wheel2a = () => {
 
@@ -39,7 +41,7 @@ const wheel2a = () => {
       response_ends_trial: true,
       on_load: mouseview_trial_start,
       on_finish: mouseview_trial_end,
-			trial_duration: 15000,
+			trial_duration: 10000,
       choices: "NO_KEYS",
     }
 }
