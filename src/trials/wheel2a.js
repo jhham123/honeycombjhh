@@ -1,4 +1,3 @@
-
 import {makeWheel} from "../lib/markup/makeMaskedWheel2";
 import readWheelNumbers2 from "../lib/readWheelNumbers2";
 import * as mouseview from "mouseviewjs"
@@ -19,6 +18,13 @@ var mouseview_trial_start = ()=> {
 
 
 }
+function warningMessage(data) {
+	window.mouseview.logEvent('SizeChange')
+	// data.end_experiment_fail_msg = "EXPERIMENT FAILED due to monitor resizing."
+	alert("EXPERIMENT FAILED due to monitor resizing.")
+	data.break_experiment = undefined
+}
+window.onresize = warningMessage;
 
 var mouseview_trial_end = (data)=> {
 	window.mouseview.logEvent('TrialEnded')

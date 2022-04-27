@@ -1,5 +1,6 @@
 # Honeycomb
 
+<<<<<<< HEAD
 *Note: previously named Neuro Task Starter, some references may still refer to it as such*
 
 This repo contains a simple task to use as a starter/template for building [jspsych](https://www.jspsych.org/) tasks with React and Electron.  See [Neuro Task Starter Workshop Slides](https://docs.google.com/presentation/d/1l3wLc2JQ9kPKxTCRBcc6_w7P27p2LkluD-yGHYnoOgA/edit?usp=sharing) for an overview of the project.
@@ -266,3 +267,10 @@ Run the built app.
 #### `npm run electron-dev`
 
 Run the current state of the code (un-built).
+=======
+[![DOI](https://zenodo.org/badge/201963539.svg)](https://zenodo.org/badge/latestdoi/201963539) [![docs](https://img.shields.io/badge/docs-stable-blue)](https://brown-ccv.github.io/honeycomb-docs/)
+
+Honeycomb is a template for reproducible psychophysiological tasks for clinic, laboratory, and home use. It is maintained by members of the [Center for Computation and Visualization](https://ccv.brown.edu) and the [Neuromotion Lab](http://borton.engin.brown.edu/) at Brown University. To learn about installation, usage and deployment please [visit our documentation](https://brown-ccv.github.io/honeycomb-docs/).
+
+*Note: previously named Neuro Task Starter, some references may still refer to it as such*
+>>>>>>> honeycomb/main

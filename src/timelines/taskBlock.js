@@ -1,8 +1,11 @@
 import taskTrial from './taskTrial'
 import { generateStartingOpts } from '../lib/taskUtils'
 
+<<<<<<< HEAD
 // default code; not used
 
+=======
+>>>>>>> honeycomb/main
 const taskBlock = (blockSettings) => {
   // initialize block
 	const startingOpts = generateStartingOpts(blockSettings)

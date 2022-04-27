@@ -1,6 +1,7 @@
 import {makeWheel} from "../lib/markup/makeMaskedWheel2";
 import readWheelNumbers from "../lib/readWheelNumbers";
 import * as mouseview from "mouseviewjs"
+// import jsPsych from "jspsych-react"
 
 /**
  * This trial reads from a file to learn the values to show on a wheel
@@ -15,20 +16,16 @@ var mouseview_trial_start = ()=> {
 	window.mouseview.init()
   window.mouseview.logEvent('TrialStarted')
 	window.mouseview.startTracking()}
-	// document.getElementById("warning").style.visibility = "hidden"
 
-// 	function warningMessage() {
-// 		// window.mouseview.stopTracking()
-// 		window.mouseview.logEvent('SizeChange')
-// 		window.mouseview.removeAll()
-// 		document.getElementById("warning").style.visibility = "visible"
-// 		window.onresize = null
-// 		// var hide = document.getElementsByClassName('container')
-// 		// container.setAttribute('visibility', 'hidden')
-// 	}
-// 	window.onresize = warningMessage;
-// }
-//
+function warningMessage(data) {
+	window.mouseview.logEvent('SizeChange')
+	// data.end_experiment_fail_msg = "EXPERIMENT FAILED due to monitor resizing."
+	alert("EXPERIMENT FAILED due to monitor resizing.")
+	data.break_experiment = undefined
+	// jsPsych.endExperiment("pag")
+}
+window.onresize = warningMessage;
+
 var mouseview_trial_end = (data)=> {
 	window.mouseview.logEvent('TrialEnded')
 	window.mouseview.stopTracking()
@@ -45,11 +42,10 @@ const wheel1a = () => {
     return {
       type: "html_keyboard_response",
       stimulus: wheelHTML,
-			prompt: '<div class="happiness-text-slider" id="warning" visibility="hidden">Return to full size to continue.</div>',
-      response_ends_trial: true,
+			response_ends_trial: true,
       on_load: mouseview_trial_start,
       on_finish: mouseview_trial_end,
-			trial_duration: 30000,
+			trial_duration: 10000,
       choices: "NO_KEYS",
     }
 }
