@@ -120,6 +120,7 @@ function App () {
         if (config.USE_FIREBASE && pID) {
           setMethod('firebase')
           setLoggedIn(true, 'prolific', pID)
+					initParticipant(pID, 'prolific', startDate)
         } else {
           setReject(true)
         }
