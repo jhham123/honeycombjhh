@@ -33,7 +33,7 @@ jobs:
       id: package_info
 
     # install, test, build package
-    - run: git config --global url."https://github.com/".insteadOf git://github.com
+    - run: git config --global url."https://github.com/".insteadOf "git://github.com"
     - name: npm install
       run: npm install
     - name: npm build
