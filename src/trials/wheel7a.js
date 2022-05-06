@@ -31,6 +31,7 @@ var mouseview_trial_end = (data)=> {
 	window.mouseview.stopTracking()
 	window.mouseview.storeData()
   window.mouseview.removeAll()
+	yeet
 	const mouseviewData = localStorage.getItem('mouseview_data')
 	data.trial_tag = mouseviewData
 }
@@ -47,7 +48,7 @@ const wheel7a = () => {
       response_ends_trial: true,
       on_load: mouseview_trial_start,
       on_finish: mouseview_trial_end,
-			trial_duration: 10009,
+			trial_duration: 10000,
       choices: "NO_KEYS",
     }
 }
