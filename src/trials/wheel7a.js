@@ -47,7 +47,7 @@ const wheel7a = () => {
       response_ends_trial: true,
       on_load: mouseview_trial_start,
       on_finish: mouseview_trial_end,
-			trial_duration: 10000,
+			trial_duration: 10009,
       choices: "NO_KEYS",
     }
 }
