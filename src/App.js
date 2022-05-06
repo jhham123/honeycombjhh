@@ -9,7 +9,6 @@ import { getTurkUniqueId, sleep } from './lib/utils'
 import { msmrTrain } from "./lib/msmrTrain";
 import { browserCheck } from "./lib/jspsych-screen-check"
 
-console.log("")
 let ipcRenderer = false;
 let psiturk = false
 if (IS_ELECTRON) {
