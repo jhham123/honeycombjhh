@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import { getTurkUniqueId, sleep } from './lib/utils'
 import { msmrTrain } from "./lib/msmrTrain";
-import { browser1Check } from "./lib/jspsych-screen-check"
+import { browserCheck } from "./lib/jspsych-screen-check"
 
 <<<<<<< HEAD
 =======
