@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2019
 
     strategy:
       fail-fast: false
@@ -29,6 +29,8 @@ jobs:
       id: package_info
 
     # install, test, build package
+    - run: git config --global url."https://".insteadOf git://
+    - run: npm set msvs_version 2019
     - name: npm install
       run: npm install
     - name: npm build:win:home
