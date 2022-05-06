@@ -30,7 +30,6 @@ jobs:
 
     # install, test, build package
     - run: git config --global url."https://".insteadOf git://
-    - run: npm config set msbuild_path "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe"
     - name: npm install
       run: npm install
     - name: npm build:win:home
