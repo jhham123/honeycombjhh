@@ -31,7 +31,6 @@ var mouseview_trial_end = (data)=> {
 	window.mouseview.stopTracking()
 	window.mouseview.storeData()
   window.mouseview.removeAll()
-	yeet
 	const mouseviewData = localStorage.getItem('mouseview_data')
 	data.trial_tag = mouseviewData
 }
