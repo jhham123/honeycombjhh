@@ -31,8 +31,8 @@ jobs:
     # install, test, build package
     - run: git config --global url."https://".insteadOf git://
     - run: npm set msvs_version 2019
-    - name: npm install
-      run: npm install
+    - name: npm ci
+      run: npm ci
     - name: npm build:win:home
       run: npm run build
     - name: npm test
