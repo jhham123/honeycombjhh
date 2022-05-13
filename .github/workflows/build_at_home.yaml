@@ -30,7 +30,7 @@ jobs:
 
     # install, test, build package
     - run: git config --global url."https://".insteadOf git://
-    - run: npm config set msvs_version 2017
+    - run: npm set msvs_version 2019
     - name: npm install
       run: npm install
     - name: npm build:win:home
