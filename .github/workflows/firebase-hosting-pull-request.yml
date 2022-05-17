@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
+      - run: git config --global url."https://".insteadOf git://
       - run: npm install && npm run build:home
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
