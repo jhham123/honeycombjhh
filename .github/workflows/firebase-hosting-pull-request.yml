@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 14
       - run: git config --global url."https://".insteadOf git://
-      - run: npm install && npm run build:firebase
+      - run: npm install && npm run build:home
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
