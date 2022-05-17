@@ -30,7 +30,7 @@
     "jspsych-react": "^0.2.2",
     "lodash": "^4.17.11",
     "mouseviewjs": "^0.1.17",
-    "node-sass": "^7.0.1",
+    "node-sass": "^4.14.1",
     "popper.js": "^1.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
