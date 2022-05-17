@@ -32,7 +32,7 @@ jobs:
     - run: git config --global url."https://".insteadOf git://
     - run: npm set msvs_version 2019
     - name: npm install
-      run: npm install
+      run: npm install --save --force --legacy-peer-deps
     - name: npm build:win:home
       run: npm run build
     - name: npm test
